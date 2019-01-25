@@ -1,0 +1,1284 @@
+(*  src = "xgate_jtag.v:392" * 
+module  $paramod xgate_instr_decode IR_BITS=4  bypass  clamp  highz  extest  force_pul_lo  force_pul_hi  sample  idcode  usercode  udi_1  sel_bypass  sel_bsd  sel_id  sel_udi_1  ir_reg  ;
+wire _00_ ;
+wire [3:0] _01_ ;
+wire [1:0] _02_ ;
+wire _03_ ;
+wire [1:0] _04_ ;
+wire [1:0] _05_ ;
+wire [1:0] _06_ ;
+wire [1:0] _07_ ;
+wire [1:0] _08_ ;
+wire [1:0] _09_ ;
+wire _10_ ;
+wire [3:0] _11_ ;
+wire [3:0] _12_ ;
+wire _13_ ;
+wire _14_ ;
+wire _15_ ;
+wire _16_ ;
+wire _17_ ;
+wire _18_ ;
+wire _19_ ;
+wire _20_ ;
+(*  src = "xgate_jtag.v:413" * 
+  wire _21_ ;
+(*  src = "xgate_jtag.v:413" * 
+  wire _22_ ;
+(*  src = "xgate_jtag.v:413" * 
+  wire _23_ ;
+(*  src = "xgate_jtag.v:394" * 
+  output bypass ;
+(*  src = "xgate_jtag.v:395" * 
+  output clamp ;
+(*  src = "xgate_jtag.v:397" * 
+  output extest ;
+(*  src = "xgate_jtag.v:399" * 
+  output force_pul_hi ;
+(*  src = "xgate_jtag.v:398" * 
+  output force_pul_lo ;
+(*  src = "xgate_jtag.v:396" * 
+  output highz ;
+(*  src = "xgate_jtag.v:401" * 
+  output idcode ;
+(*  src = "xgate_jtag.v:410" * 
+  input[3:0]  ir_reg ;
+(*  src = "xgate_jtag.v:400" * 
+  output sample ;
+(*  src = "xgate_jtag.v:406" * 
+  output sel_bsd ;
+(*  src = "xgate_jtag.v:405" * 
+  output sel_bypass ;
+(*  src = "xgate_jtag.v:407" * 
+  output sel_id ;
+(*  src = "xgate_jtag.v:408" * 
+  output sel_udi_1 ;
+(*  src = "xgate_jtag.v:403" * 
+  output udi_1 ;
+(*  src = "xgate_jtag.v:402" * 
+  output usercode ;
+assign _01_[0] = highz | extest ;
+assign _01_[1] = force_pul_lo | force_pul_hi ;
+assign _01_[2] = sample | idcode ;
+assign _01_[3] = usercode | sel_udi_1 ;
+assign _02_[0] = _01_[0] | _01_[1] ;
+assign _02_[1] = _01_[2] | _01_[3] ;
+assign _03_ = _02_[0] | _02_[1] ;
+assign _00_ = _03_ | clamp ;
+assign _04_[1] = _11_[2] | * src = "xgate_jtag.v:430" *   _11_[3] ;
+assign _13_ = _04_[0] | * src = "xgate_jtag.v:430" *   _04_[1] ;
+assign _05_[0] = _12_[0] | * src = "xgate_jtag.v:430" *   _12_[1] ;
+assign _14_ = _05_[0] | * src = "xgate_jtag.v:430" *   _05_[1] ;
+assign _15_ = _06_[0] | * src = "xgate_jtag.v:430" *   _05_[1] ;
+assign _16_ = _05_[0] | * src = "xgate_jtag.v:430" *   _07_[1] ;
+assign _08_[0] = ir_reg[0] | * src = "xgate_jtag.v:430" *   _12_[1] ;
+assign _07_[1] = _11_[2] | * src = "xgate_jtag.v:430" *   ir_reg[3] ;
+assign _17_ = _08_[0] | * src = "xgate_jtag.v:430" *   _07_[1] ;
+assign _09_[1] = ir_reg[2] | * src = "xgate_jtag.v:430" *   _11_[3] ;
+assign _18_ = _08_[0] | * src = "xgate_jtag.v:430" *   _09_[1] ;
+assign _19_ = _06_[0] | * src = "xgate_jtag.v:430" *   _09_[1] ;
+assign _06_[0] = _12_[0] | * src = "xgate_jtag.v:430" *   ir_reg[1] ;
+assign _20_ = _06_[0] | * src = "xgate_jtag.v:430" *   _07_[1] ;
+assign _04_[0] = ir_reg[0] | * src = "xgate_jtag.v:430" *   ir_reg[1] ;
+assign _05_[1] = ir_reg[2] | * src = "xgate_jtag.v:430" *   ir_reg[3] ;
+assign _10_ = _04_[0] | * src = "xgate_jtag.v:430" *   _05_[1] ;
+assign _21_ = bypass | * src = "xgate_jtag.v:413" *   clamp ;
+assign _22_ = _21_ | * src = "xgate_jtag.v:413" *   highz ;
+assign _23_ = _22_ | * src = "xgate_jtag.v:413" *   force_pul_lo ;
+assign sel_bypass = _23_ | * src = "xgate_jtag.v:413" *   force_pul_hi ;
+assign sel_bsd = extest | * src = "xgate_jtag.v:414" *   sample ;
+assign sel_id = idcode | * src = "xgate_jtag.v:415" *   usercode ;
+assign clamp = ~ * src = "xgate_jtag.v:430" *  _17_ ;
+assign sel_udi_1 = ~ * src = "xgate_jtag.v:430" *  _13_ ;
+assign usercode = ~ * src = "xgate_jtag.v:430" *  _14_ ;
+assign idcode = ~ * src = "xgate_jtag.v:430" *  _15_ ;
+assign sample = ~ * src = "xgate_jtag.v:430" *  _16_ ;
+assign bypass = ~ * src = "xgate_jtag.v:430" *  _00_ ;
+assign force_pul_hi = ~ * src = "xgate_jtag.v:430" *  _18_ ;
+assign force_pul_lo = ~ * src = "xgate_jtag.v:430" *  _19_ ;
+assign highz = ~ * src = "xgate_jtag.v:430" *  _20_ ;
+assign extest = ~ * src = "xgate_jtag.v:430" *  _10_ ;
+assign _11_[2] = ir_reg[2] ^ * src = "xgate_jtag.v:430" *   1'b1 ;
+assign _12_[1] = ir_reg[1] ^ * src = "xgate_jtag.v:430" *   1'b1 ;
+assign _12_[0] = ir_reg[0] ^ * src = "xgate_jtag.v:430" *   1'b1 ;
+assign _11_[3] = ir_reg[3] ^ * src = "xgate_jtag.v:430" *   1'b1 ;
+assign udi_1 = sel_udi_1 ;
+endmodule
+(*  src = "xgate_jtag.v:288" * 
+module  $paramod xgate_jtag_ir IR_BITS=4  ir_reg  ir_so  update_ir  capture_ir  shift_ir  jtag_tdi  capture_clk  update_clk  jtag_reset_n  ;
+(*  src = "xgate_jtag.v:317" * 
+  wire[3:0]  _00_ ;
+(*  src = "xgate_jtag.v:308" * 
+  wire[3:0]  _01_ ;
+wire [3:0] _02_ ;
+(*  src = "xgate_jtag.v:298" * 
+  input capture_clk ;
+(*  src = "xgate_jtag.v:294" * 
+  input capture_ir ;
+(*  src = "xgate_jtag.v:290" * 
+  output[3:0]  ir_reg ;
+reg [3:0] ir_reg ;
+(*  src = "xgate_jtag.v:303" * 
+  reg[3:0]  ir_shift_reg ;
+(*  src = "xgate_jtag.v:291" * 
+  output ir_so ;
+(*  src = "xgate_jtag.v:300" * 
+  input jtag_reset_n ;
+(*  src = "xgate_jtag.v:297" * 
+  input jtag_tdi ;
+(*  src = "xgate_jtag.v:295" * 
+  input shift_ir ;
+(*  src = "xgate_jtag.v:299" * 
+  input update_clk ;
+(*  src = "xgate_jtag.v:293" * 
+  input update_ir ;
+assign _00_[0] = update_ir ?  * src = "xgate_jtag.v:320" *  ir_shift_reg[0] : ir_reg[0] ;
+assign _00_[1] = update_ir ?  * src = "xgate_jtag.v:320" *  ir_shift_reg[1] : ir_reg[1] ;
+assign _00_[2] = update_ir ?  * src = "xgate_jtag.v:320" *  ir_shift_reg[2] : ir_reg[2] ;
+assign _00_[3] = update_ir ?  * src = "xgate_jtag.v:320" *  ir_shift_reg[3] : ir_reg[3] ;
+assign _02_[0] = shift_ir ?  * src = "xgate_jtag.v:313" *  ir_shift_reg[1] : ir_shift_reg[0] ;
+assign _02_[1] = shift_ir ?  * src = "xgate_jtag.v:313" *  ir_shift_reg[2] : ir_shift_reg[1] ;
+assign _02_[2] = shift_ir ?  * src = "xgate_jtag.v:313" *  ir_shift_reg[3] : ir_shift_reg[2] ;
+assign _02_[3] = shift_ir ?  * src = "xgate_jtag.v:313" *  jtag_tdi : ir_shift_reg[3] ;
+assign _01_[0] = capture_ir ?  * src = "xgate_jtag.v:311" *  ir_reg[0] : _02_[0] ;
+assign _01_[1] = capture_ir ?  * src = "xgate_jtag.v:311" *  ir_reg[1] : _02_[1] ;
+assign _01_[2] = capture_ir ?  * src = "xgate_jtag.v:311" *  ir_reg[2] : _02_[2] ;
+assign _01_[3] = capture_ir ?  * src = "xgate_jtag.v:311" *  ir_reg[3] : _02_[3] ;
+(*  src = "xgate_jtag.v:317" * 
+  always @ posedge update_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      ir_reg[0] <= 1 ;
+else 
+      ir_reg[0] <= _00_[0] ;
+(*  src = "xgate_jtag.v:317" * 
+  always @ posedge update_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      ir_reg[1] <= 1 ;
+else 
+      ir_reg[1] <= _00_[1] ;
+(*  src = "xgate_jtag.v:317" * 
+  always @ posedge update_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      ir_reg[2] <= 1 ;
+else 
+      ir_reg[2] <= _00_[2] ;
+(*  src = "xgate_jtag.v:317" * 
+  always @ posedge update_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      ir_reg[3] <= 1 ;
+else 
+      ir_reg[3] <= _00_[3] ;
+(*  src = "xgate_jtag.v:308" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      ir_shift_reg[0] <= 0 ;
+else 
+      ir_shift_reg[0] <= _01_[0] ;
+(*  src = "xgate_jtag.v:308" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      ir_shift_reg[1] <= 0 ;
+else 
+      ir_shift_reg[1] <= _01_[1] ;
+(*  src = "xgate_jtag.v:308" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      ir_shift_reg[2] <= 0 ;
+else 
+      ir_shift_reg[2] <= _01_[2] ;
+(*  src = "xgate_jtag.v:308" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      ir_shift_reg[3] <= 0 ;
+else 
+      ir_shift_reg[3] <= _01_[3] ;
+assign ir_so = ir_shift_reg[0] ;
+endmodule
+(*  src = "xgate_jtag.v:542" * 
+module bc_2 capture_clk  update_clk  capture_en  update_en  shift_dr  mode  si  data_in  reset_n  data_out  so  ;
+(*  src = "xgate_jtag.v:568" * 
+  wire _0_ ;
+(*  src = "xgate_jtag.v:561" * 
+  wire _1_ ;
+(*  src = "xgate_jtag.v:565" * 
+  wire _2_ ;
+(*  src = "xgate_jtag.v:544" * 
+  input capture_clk ;
+(*  src = "xgate_jtag.v:546" * 
+  input capture_en ;
+(*  src = "xgate_jtag.v:551" * 
+  input data_in ;
+(*  src = "xgate_jtag.v:554" * 
+  output data_out ;
+(*  src = "xgate_jtag.v:558" * 
+  reg data_reg ;
+(*  src = "xgate_jtag.v:549" * 
+  input mode ;
+(*  src = "xgate_jtag.v:552" * 
+  input reset_n ;
+(*  src = "xgate_jtag.v:548" * 
+  input shift_dr ;
+(*  src = "xgate_jtag.v:550" * 
+  input si ;
+(*  src = "xgate_jtag.v:555" * 
+  output so ;
+reg so ;
+(*  src = "xgate_jtag.v:545" * 
+  input update_clk ;
+(*  src = "xgate_jtag.v:547" * 
+  input update_en ;
+assign _2_ = shift_dr ?  * src = "xgate_jtag.v:565" *  si : data_out ;
+assign data_out = mode ?  * src = "xgate_jtag.v:574" *  data_reg : data_in ;
+assign _1_ = capture_en ?  * src = "xgate_jtag.v:564" *  _2_ : so ;
+assign _0_ = update_en ?  * src = "xgate_jtag.v:571" *  so : data_reg ;
+(*  src = "xgate_jtag.v:561" * 
+  always @ posedge capture_clk or negedge reset_n 
+    if  !reset_n 
+      so <= 0 ;
+else 
+      so <= _1_ ;
+(*  src = "xgate_jtag.v:568" * 
+  always @ posedge update_clk or negedge reset_n 
+    if  !reset_n 
+      data_reg <= 0 ;
+else 
+      data_reg <= _0_ ;
+endmodule
+(*  src = "xgate_jtag.v:500" * 
+module bc_7 capture_clk  update_clk  capture_en  update_en  shift_dr  mode  si  pin_input  control_out  output_data  reset_n  data_out  so  ;
+(*  src = "xgate_jtag.v:528" * 
+  wire _00_ ;
+(*  src = "xgate_jtag.v:521" * 
+  wire _01_ ;
+(*  src = "xgate_jtag.v:525" * 
+  wire _02_ ;
+(*  src = "xgate_jtag.v:525" * 
+  wire _03_ ;
+(*  src = "xgate_jtag.v:525" * 
+  wire _04_ ;
+(*  src = "xgate_jtag.v:525" * 
+  wire _05_ ;
+(*  src = "xgate_jtag.v:502" * 
+  input capture_clk ;
+(*  src = "xgate_jtag.v:504" * 
+  input capture_en ;
+(*  src = "xgate_jtag.v:510" * 
+  input control_out ;
+(*  src = "xgate_jtag.v:514" * 
+  output data_out ;
+(*  src = "xgate_jtag.v:518" * 
+  reg data_reg ;
+(*  src = "xgate_jtag.v:507" * 
+  input mode ;
+(*  src = "xgate_jtag.v:511" * 
+  input output_data ;
+(*  src = "xgate_jtag.v:509" * 
+  input pin_input ;
+(*  src = "xgate_jtag.v:512" * 
+  input reset_n ;
+(*  src = "xgate_jtag.v:506" * 
+  input shift_dr ;
+(*  src = "xgate_jtag.v:508" * 
+  input si ;
+(*  src = "xgate_jtag.v:515" * 
+  output so ;
+reg so ;
+(*  src = "xgate_jtag.v:503" * 
+  input update_clk ;
+(*  src = "xgate_jtag.v:505" * 
+  input update_en ;
+assign _02_ = ~ * src = "xgate_jtag.v:525" *  control_out ;
+assign _03_ = _02_ | * src = "xgate_jtag.v:525" *   mode ;
+assign _04_ = _03_ ?  * src = "xgate_jtag.v:525" *  pin_input : output_data ;
+assign _05_ = shift_dr ?  * src = "xgate_jtag.v:525" *  si : _04_ ;
+assign data_out = mode ?  * src = "xgate_jtag.v:534" *  data_reg : output_data ;
+assign _01_ = capture_en ?  * src = "xgate_jtag.v:524" *  _05_ : so ;
+assign _00_ = update_en ?  * src = "xgate_jtag.v:531" *  so : data_reg ;
+(*  src = "xgate_jtag.v:521" * 
+  always @ posedge capture_clk or negedge reset_n 
+    if  !reset_n 
+      so <= 0 ;
+else 
+      so <= _01_ ;
+(*  src = "xgate_jtag.v:528" * 
+  always @ posedge update_clk or negedge reset_n 
+    if  !reset_n 
+      data_reg <= 0 ;
+else 
+      data_reg <= _00_ ;
+endmodule
+(*  src = "xgate_jtag.v:329" * 
+module xgate_bypass_reg bypass_so  jtag_tdi  capture_clk  jtag_reset_n  ;
+(*  src = "xgate_jtag.v:331" * 
+  output bypass_so ;
+reg bypass_so ;
+(*  src = "xgate_jtag.v:334" * 
+  input capture_clk ;
+(*  src = "xgate_jtag.v:335" * 
+  input jtag_reset_n ;
+(*  src = "xgate_jtag.v:333" * 
+  input jtag_tdi ;
+(*  src = "xgate_jtag.v:339" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      bypass_so <= 0 ;
+else 
+      bypass_so <= jtag_tdi ;
+endmodule
+(*  src = "xgate_jtag.v:351" * 
+module xgate_id_reg id_so  jtag_tdi  capture_clk  capture_dr  shift_dr  idcode  usercode  jtag_reset_n  ;
+(*  src = "xgate_jtag.v:378" * 
+  wire[31:0]  _000_ ;
+(*  src = "xgate_jtag.v:375" * 
+  wire _001_ ;
+(*  src = "xgate_jtag.v:375" * 
+  wire _002_ ;
+(*  src = "xgate_jtag.v:356" * 
+  input capture_clk ;
+(*  src = "xgate_jtag.v:357" * 
+  input capture_dr ;
+(*  src = "xgate_jtag.v:375" * 
+  wire capture_en ;
+(*  src = "xgate_jtag.v:373" * 
+  wire[31:0]  din_mux ;
+(*  src = "xgate_jtag.v:369" * 
+  reg[31:0]  id_shifter ;
+(*  src = "xgate_jtag.v:353" * 
+  output id_so ;
+(*  src = "xgate_jtag.v:359" * 
+  input idcode ;
+(*  src = "xgate_jtag.v:361" * 
+  input jtag_reset_n ;
+(*  src = "xgate_jtag.v:355" * 
+  input jtag_tdi ;
+(*  src = "xgate_jtag.v:358" * 
+  input shift_dr ;
+(*  src = "xgate_jtag.v:360" * 
+  input usercode ;
+assign _001_ = idcode | * src = "xgate_jtag.v:375" *   usercode ;
+assign _002_ = capture_dr | * src = "xgate_jtag.v:375" *   shift_dr ;
+assign capture_en = _001_ & * src = "xgate_jtag.v:375" *   _002_ ;
+assign din_mux[30] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[31] : 1'b0 ;
+assign din_mux[31] = shift_dr ?  * src = "xgate_jtag.v:373" *  jtag_tdi : 1'b0 ;
+assign _000_[0] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[0] : id_shifter[0] ;
+assign _000_[1] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[1] : id_shifter[1] ;
+assign _000_[2] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[2] : id_shifter[2] ;
+assign _000_[3] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[3] : id_shifter[3] ;
+assign _000_[4] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[4] : id_shifter[4] ;
+assign _000_[5] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[5] : id_shifter[5] ;
+assign _000_[6] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[6] : id_shifter[6] ;
+assign _000_[7] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[7] : id_shifter[7] ;
+assign _000_[8] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[8] : id_shifter[8] ;
+assign _000_[9] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[9] : id_shifter[9] ;
+assign _000_[10] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[10] : id_shifter[10] ;
+assign _000_[11] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[11] : id_shifter[11] ;
+assign _000_[12] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[12] : id_shifter[12] ;
+assign _000_[13] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[13] : id_shifter[13] ;
+assign _000_[14] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[14] : id_shifter[14] ;
+assign _000_[15] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[15] : id_shifter[15] ;
+assign _000_[16] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[16] : id_shifter[16] ;
+assign _000_[17] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[17] : id_shifter[17] ;
+assign _000_[18] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[18] : id_shifter[18] ;
+assign _000_[19] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[19] : id_shifter[19] ;
+assign _000_[20] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[20] : id_shifter[20] ;
+assign _000_[21] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[21] : id_shifter[21] ;
+assign _000_[22] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[22] : id_shifter[22] ;
+assign _000_[23] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[23] : id_shifter[23] ;
+assign _000_[24] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[24] : id_shifter[24] ;
+assign _000_[25] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[25] : id_shifter[25] ;
+assign _000_[26] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[26] : id_shifter[26] ;
+assign _000_[27] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[27] : id_shifter[27] ;
+assign _000_[28] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[28] : id_shifter[28] ;
+assign _000_[29] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[29] : id_shifter[29] ;
+assign _000_[30] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[30] : id_shifter[30] ;
+assign _000_[31] = capture_en ?  * src = "xgate_jtag.v:381" *  din_mux[31] : id_shifter[31] ;
+assign din_mux[0] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[1] : 1'b1 ;
+assign din_mux[1] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[2] : 1'b1 ;
+assign din_mux[2] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[3] : 1'b1 ;
+assign din_mux[3] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[4] : 1'b1 ;
+assign din_mux[4] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[5] : 1'b1 ;
+assign din_mux[5] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[6] : 1'b0 ;
+assign din_mux[6] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[7] : 1'b0 ;
+assign din_mux[7] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[8] : 1'b0 ;
+assign din_mux[8] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[9] : 1'b0 ;
+assign din_mux[9] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[10] : 1'b0 ;
+assign din_mux[10] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[11] : 1'b0 ;
+assign din_mux[11] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[12] : 1'b0 ;
+assign din_mux[12] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[13] : 1'b1 ;
+assign din_mux[13] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[14] : 1'b0 ;
+assign din_mux[14] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[15] : 1'b1 ;
+assign din_mux[15] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[16] : 1'b0 ;
+assign din_mux[16] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[17] : 1'b0 ;
+assign din_mux[17] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[18] : 1'b0 ;
+assign din_mux[18] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[19] : 1'b0 ;
+assign din_mux[19] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[20] : 1'b0 ;
+assign din_mux[20] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[21] : 1'b1 ;
+assign din_mux[21] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[22] : 1'b0 ;
+assign din_mux[22] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[23] : 1'b0 ;
+assign din_mux[23] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[24] : 1'b0 ;
+assign din_mux[24] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[25] : 1'b1 ;
+assign din_mux[25] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[26] : 1'b0 ;
+assign din_mux[26] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[27] : 1'b0 ;
+assign din_mux[27] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[28] : 1'b0 ;
+assign din_mux[28] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[29] : 1'b1 ;
+assign din_mux[29] = shift_dr ?  * src = "xgate_jtag.v:373" *  id_shifter[30] : 1'b0 ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[0] <= 0 ;
+else 
+      id_shifter[0] <= _000_[0] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[1] <= 0 ;
+else 
+      id_shifter[1] <= _000_[1] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[2] <= 0 ;
+else 
+      id_shifter[2] <= _000_[2] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[3] <= 0 ;
+else 
+      id_shifter[3] <= _000_[3] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[4] <= 0 ;
+else 
+      id_shifter[4] <= _000_[4] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[5] <= 0 ;
+else 
+      id_shifter[5] <= _000_[5] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[6] <= 0 ;
+else 
+      id_shifter[6] <= _000_[6] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[7] <= 0 ;
+else 
+      id_shifter[7] <= _000_[7] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[8] <= 0 ;
+else 
+      id_shifter[8] <= _000_[8] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[9] <= 0 ;
+else 
+      id_shifter[9] <= _000_[9] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[10] <= 0 ;
+else 
+      id_shifter[10] <= _000_[10] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[11] <= 0 ;
+else 
+      id_shifter[11] <= _000_[11] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[12] <= 0 ;
+else 
+      id_shifter[12] <= _000_[12] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[13] <= 0 ;
+else 
+      id_shifter[13] <= _000_[13] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[14] <= 0 ;
+else 
+      id_shifter[14] <= _000_[14] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[15] <= 0 ;
+else 
+      id_shifter[15] <= _000_[15] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[16] <= 0 ;
+else 
+      id_shifter[16] <= _000_[16] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[17] <= 0 ;
+else 
+      id_shifter[17] <= _000_[17] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[18] <= 0 ;
+else 
+      id_shifter[18] <= _000_[18] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[19] <= 0 ;
+else 
+      id_shifter[19] <= _000_[19] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[20] <= 0 ;
+else 
+      id_shifter[20] <= _000_[20] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[21] <= 0 ;
+else 
+      id_shifter[21] <= _000_[21] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[22] <= 0 ;
+else 
+      id_shifter[22] <= _000_[22] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[23] <= 0 ;
+else 
+      id_shifter[23] <= _000_[23] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[24] <= 0 ;
+else 
+      id_shifter[24] <= _000_[24] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[25] <= 0 ;
+else 
+      id_shifter[25] <= _000_[25] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[26] <= 0 ;
+else 
+      id_shifter[26] <= _000_[26] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[27] <= 0 ;
+else 
+      id_shifter[27] <= _000_[27] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[28] <= 0 ;
+else 
+      id_shifter[28] <= _000_[28] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[29] <= 0 ;
+else 
+      id_shifter[29] <= _000_[29] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[30] <= 0 ;
+else 
+      id_shifter[30] <= _000_[30] ;
+(*  src = "xgate_jtag.v:378" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      id_shifter[31] <= 0 ;
+else 
+      id_shifter[31] <= _000_[31] ;
+assign id_so = id_shifter[0] ;
+endmodule
+(*  src = "xgate_jtag.v:392" * 
+module xgate_instr_decode bypass  clamp  highz  extest  force_pul_lo  force_pul_hi  sample  idcode  usercode  udi_1  sel_bypass  sel_bsd  sel_id  sel_udi_1  ir_reg  ;
+wire _00_ ;
+wire [3:0] _01_ ;
+wire [1:0] _02_ ;
+wire _03_ ;
+wire [1:0] _04_ ;
+wire [1:0] _05_ ;
+wire [1:0] _06_ ;
+wire [1:0] _07_ ;
+wire [1:0] _08_ ;
+wire [1:0] _09_ ;
+wire _10_ ;
+wire [3:0] _11_ ;
+wire [3:0] _12_ ;
+wire _13_ ;
+wire _14_ ;
+wire _15_ ;
+wire _16_ ;
+wire _17_ ;
+wire _18_ ;
+wire _19_ ;
+wire _20_ ;
+(*  src = "xgate_jtag.v:413" * 
+  wire _21_ ;
+(*  src = "xgate_jtag.v:413" * 
+  wire _22_ ;
+(*  src = "xgate_jtag.v:413" * 
+  wire _23_ ;
+(*  src = "xgate_jtag.v:394" * 
+  output bypass ;
+(*  src = "xgate_jtag.v:395" * 
+  output clamp ;
+(*  src = "xgate_jtag.v:397" * 
+  output extest ;
+(*  src = "xgate_jtag.v:399" * 
+  output force_pul_hi ;
+(*  src = "xgate_jtag.v:398" * 
+  output force_pul_lo ;
+(*  src = "xgate_jtag.v:396" * 
+  output highz ;
+(*  src = "xgate_jtag.v:401" * 
+  output idcode ;
+(*  src = "xgate_jtag.v:410" * 
+  input[3:0]  ir_reg ;
+(*  src = "xgate_jtag.v:400" * 
+  output sample ;
+(*  src = "xgate_jtag.v:406" * 
+  output sel_bsd ;
+(*  src = "xgate_jtag.v:405" * 
+  output sel_bypass ;
+(*  src = "xgate_jtag.v:407" * 
+  output sel_id ;
+(*  src = "xgate_jtag.v:408" * 
+  output sel_udi_1 ;
+(*  src = "xgate_jtag.v:403" * 
+  output udi_1 ;
+(*  src = "xgate_jtag.v:402" * 
+  output usercode ;
+assign _01_[0] = highz | extest ;
+assign _01_[1] = force_pul_lo | force_pul_hi ;
+assign _01_[2] = sample | idcode ;
+assign _01_[3] = usercode | sel_udi_1 ;
+assign _02_[0] = _01_[0] | _01_[1] ;
+assign _02_[1] = _01_[2] | _01_[3] ;
+assign _03_ = _02_[0] | _02_[1] ;
+assign _00_ = _03_ | clamp ;
+assign _04_[1] = _11_[2] | * src = "xgate_jtag.v:430" *   _11_[3] ;
+assign _13_ = _04_[0] | * src = "xgate_jtag.v:430" *   _04_[1] ;
+assign _05_[0] = _12_[0] | * src = "xgate_jtag.v:430" *   _12_[1] ;
+assign _14_ = _05_[0] | * src = "xgate_jtag.v:430" *   _05_[1] ;
+assign _15_ = _06_[0] | * src = "xgate_jtag.v:430" *   _05_[1] ;
+assign _16_ = _05_[0] | * src = "xgate_jtag.v:430" *   _07_[1] ;
+assign _08_[0] = ir_reg[0] | * src = "xgate_jtag.v:430" *   _12_[1] ;
+assign _07_[1] = _11_[2] | * src = "xgate_jtag.v:430" *   ir_reg[3] ;
+assign _17_ = _08_[0] | * src = "xgate_jtag.v:430" *   _07_[1] ;
+assign _09_[1] = ir_reg[2] | * src = "xgate_jtag.v:430" *   _11_[3] ;
+assign _18_ = _08_[0] | * src = "xgate_jtag.v:430" *   _09_[1] ;
+assign _19_ = _06_[0] | * src = "xgate_jtag.v:430" *   _09_[1] ;
+assign _06_[0] = _12_[0] | * src = "xgate_jtag.v:430" *   ir_reg[1] ;
+assign _20_ = _06_[0] | * src = "xgate_jtag.v:430" *   _07_[1] ;
+assign _04_[0] = ir_reg[0] | * src = "xgate_jtag.v:430" *   ir_reg[1] ;
+assign _05_[1] = ir_reg[2] | * src = "xgate_jtag.v:430" *   ir_reg[3] ;
+assign _10_ = _04_[0] | * src = "xgate_jtag.v:430" *   _05_[1] ;
+assign _21_ = bypass | * src = "xgate_jtag.v:413" *   clamp ;
+assign _22_ = _21_ | * src = "xgate_jtag.v:413" *   highz ;
+assign _23_ = _22_ | * src = "xgate_jtag.v:413" *   force_pul_lo ;
+assign sel_bypass = _23_ | * src = "xgate_jtag.v:413" *   force_pul_hi ;
+assign sel_bsd = extest | * src = "xgate_jtag.v:414" *   sample ;
+assign sel_id = idcode | * src = "xgate_jtag.v:415" *   usercode ;
+assign clamp = ~ * src = "xgate_jtag.v:430" *  _17_ ;
+assign sel_udi_1 = ~ * src = "xgate_jtag.v:430" *  _13_ ;
+assign usercode = ~ * src = "xgate_jtag.v:430" *  _14_ ;
+assign idcode = ~ * src = "xgate_jtag.v:430" *  _15_ ;
+assign sample = ~ * src = "xgate_jtag.v:430" *  _16_ ;
+assign bypass = ~ * src = "xgate_jtag.v:430" *  _00_ ;
+assign force_pul_hi = ~ * src = "xgate_jtag.v:430" *  _18_ ;
+assign force_pul_lo = ~ * src = "xgate_jtag.v:430" *  _19_ ;
+assign highz = ~ * src = "xgate_jtag.v:430" *  _20_ ;
+assign extest = ~ * src = "xgate_jtag.v:430" *  _10_ ;
+assign _11_[2] = ir_reg[2] ^ * src = "xgate_jtag.v:430" *   1'b1 ;
+assign _12_[1] = ir_reg[1] ^ * src = "xgate_jtag.v:430" *   1'b1 ;
+assign _12_[0] = ir_reg[0] ^ * src = "xgate_jtag.v:430" *   1'b1 ;
+assign _11_[3] = ir_reg[3] ^ * src = "xgate_jtag.v:430" *   1'b1 ;
+assign udi_1 = sel_udi_1 ;
+endmodule
+(*  src = "xgate_jtag.v:44" * 
+module xgate_jtag jtag_tdo  jtag_tdo_en  jtag_tdi  jtag_clk  jtag_reset_n  jtag_tms  extest  clamp  highz  force_pul_lo  force_pul_hi  sel_bsd  sel_udi_1  capture_clk  update_clk  capture_dr  update_dr  shift_dr  bsd_so  user1_so  ;
+(*  src = "xgate_jtag.v:68" * 
+  input bsd_so ;
+(*  src = "xgate_jtag.v:119" * 
+   * unused_bits = "0" * 
+  wire bypass ;
+(*  src = "xgate_jtag.v:141" * 
+  wire bypass_so ;
+(*  src = "xgate_jtag.v:63" * 
+  output capture_clk ;
+(*  src = "xgate_jtag.v:65" * 
+  output capture_dr ;
+(*  src = "xgate_jtag.v:92" * 
+  wire capture_ir ;
+(*  src = "xgate_jtag.v:55" * 
+  output clamp ;
+(*  src = "xgate_jtag.v:54" * 
+  output extest ;
+(*  src = "xgate_jtag.v:58" * 
+  output force_pul_hi ;
+(*  src = "xgate_jtag.v:57" * 
+  output force_pul_lo ;
+(*  src = "xgate_jtag.v:56" * 
+  output highz ;
+(*  src = "xgate_jtag.v:151" * 
+  wire id_so ;
+(*  src = "xgate_jtag.v:126" * 
+  wire idcode ;
+(*  src = "xgate_jtag.v:76" * 
+  wire[3:0]  ir_reg ;
+(*  src = "xgate_jtag.v:106" * 
+  wire ir_so ;
+(*  src = "xgate_jtag.v:50" * 
+  input jtag_clk ;
+(*  src = "xgate_jtag.v:51" * 
+  input jtag_reset_n ;
+(*  src = "xgate_jtag.v:73" * 
+   * unused_bits = "0 1 2 3" * 
+  wire[3:0]  jtag_state ;
+(*  src = "xgate_jtag.v:49" * 
+  input jtag_tdi ;
+(*  src = "xgate_jtag.v:46" * 
+  output jtag_tdo ;
+(*  src = "xgate_jtag.v:47" * 
+  output jtag_tdo_en ;
+(*  src = "xgate_jtag.v:52" * 
+  input jtag_tms ;
+(*  src = "xgate_jtag.v:74" * 
+   * unused_bits = "0 1 2 3" * 
+  wire[3:0]  next_jtag_state ;
+(*  src = "xgate_jtag.v:125" * 
+   * unused_bits = "0" * 
+  wire sample ;
+(*  src = "xgate_jtag.v:60" * 
+  output sel_bsd ;
+(*  src = "xgate_jtag.v:130" * 
+  wire sel_bypass ;
+(*  src = "xgate_jtag.v:132" * 
+  wire sel_id ;
+(*  src = "xgate_jtag.v:61" * 
+  output sel_udi_1 ;
+(*  src = "xgate_jtag.v:67" * 
+  output shift_dr ;
+(*  src = "xgate_jtag.v:93" * 
+  wire shift_ir ;
+(*  src = "xgate_jtag.v:128" * 
+   * unused_bits = "0" * 
+  wire udi_1 ;
+(*  src = "xgate_jtag.v:64" * 
+  output update_clk ;
+(*  src = "xgate_jtag.v:66" * 
+  output update_dr ;
+(*  src = "xgate_jtag.v:91" * 
+  wire update_ir ;
+(*  src = "xgate_jtag.v:69" * 
+  input user1_so ;
+(*  src = "xgate_jtag.v:127" * 
+  wire usercode ;
+assign update_clk = ~ * src = "xgate_jtag.v:83" *  jtag_clk ;
+(*  src = "xgate_jtag.v:149" * 
+  xgate_id_reg chip_id  
+    .capture_clk jtag_clk  
+    .capture_dr capture_dr  
+    .id_so id_so  
+    .idcode idcode  
+    .jtag_reset_n jtag_reset_n  
+    .jtag_tdi jtag_tdi  
+    .shift_dr shift_dr  
+    .usercode usercode 
+    ;
+(*  src = "xgate_jtag.v:117" * 
+   $paramod xgate_instr_decode IR_BITS=4  decoder  
+    .bypass bypass  
+    .clamp clamp  
+    .extest extest  
+    .force_pul_hi force_pul_hi  
+    .force_pul_lo force_pul_lo  
+    .highz highz  
+    .idcode idcode  
+    .ir_reg ir_reg  
+    .sample sample  
+    .sel_bsd sel_bsd  
+    .sel_bypass sel_bypass  
+    .sel_id sel_id  
+    .sel_udi_1 sel_udi_1  
+    .udi_1 udi_1  
+    .usercode usercode 
+    ;
+(*  src = "xgate_jtag.v:103" * 
+   $paramod xgate_jtag_ir IR_BITS=4  jtag_ir  
+    .capture_clk jtag_clk  
+    .capture_ir capture_ir  
+    .ir_reg ir_reg  
+    .ir_so ir_so  
+    .jtag_reset_n jtag_reset_n  
+    .jtag_tdi jtag_tdi  
+    .shift_ir shift_ir  
+    .update_clk update_clk  
+    .update_ir update_ir 
+    ;
+(*  src = "xgate_jtag.v:87" * 
+  xgate_jtag_sm jtag_sm  
+    .capture_clk jtag_clk  
+    .capture_dr capture_dr  
+    .capture_ir capture_ir  
+    .jtag_reset_n jtag_reset_n  
+    .jtag_state jtag_state  
+    .jtag_tms jtag_tms  
+    .next_jtag_state next_jtag_state  
+    .shift_dr shift_dr  
+    .shift_ir shift_ir  
+    .update_dr update_dr  
+    .update_ir update_ir 
+    ;
+(*  src = "xgate_jtag.v:139" * 
+  xgate_bypass_reg tdi_bypass  
+    .bypass_so bypass_so  
+    .capture_clk jtag_clk  
+    .jtag_reset_n jtag_reset_n  
+    .jtag_tdi jtag_tdi 
+    ;
+(*  src = "xgate_jtag.v:163" * 
+  xgate_tdo_mux tdo_out  
+    .bsd_so bsd_so  
+    .bypass_so bypass_so  
+    .id_so id_so  
+    .ir_so ir_so  
+    .jtag_reset_n jtag_reset_n  
+    .jtag_tdo jtag_tdo  
+    .jtag_tdo_en jtag_tdo_en  
+    .sel_bsd sel_bsd  
+    .sel_bypass sel_bypass  
+    .sel_id sel_id  
+    .sel_udi_1 sel_udi_1  
+    .shift_dr shift_dr  
+    .shift_ir shift_ir  
+    .update_clk update_clk  
+    .user1_so user1_so 
+    ;
+assign capture_clk = jtag_clk ;
+endmodule
+(*  src = "xgate_jtag.v:288" * 
+module xgate_jtag_ir ir_reg  ir_so  update_ir  capture_ir  shift_ir  jtag_tdi  capture_clk  update_clk  jtag_reset_n  ;
+(*  src = "xgate_jtag.v:317" * 
+  wire[3:0]  _00_ ;
+(*  src = "xgate_jtag.v:308" * 
+  wire[3:0]  _01_ ;
+wire [3:0] _02_ ;
+(*  src = "xgate_jtag.v:298" * 
+  input capture_clk ;
+(*  src = "xgate_jtag.v:294" * 
+  input capture_ir ;
+(*  src = "xgate_jtag.v:290" * 
+  output[3:0]  ir_reg ;
+reg [3:0] ir_reg ;
+(*  src = "xgate_jtag.v:303" * 
+  reg[3:0]  ir_shift_reg ;
+(*  src = "xgate_jtag.v:291" * 
+  output ir_so ;
+(*  src = "xgate_jtag.v:300" * 
+  input jtag_reset_n ;
+(*  src = "xgate_jtag.v:297" * 
+  input jtag_tdi ;
+(*  src = "xgate_jtag.v:295" * 
+  input shift_ir ;
+(*  src = "xgate_jtag.v:299" * 
+  input update_clk ;
+(*  src = "xgate_jtag.v:293" * 
+  input update_ir ;
+assign _02_[0] = shift_ir ?  * src = "xgate_jtag.v:313" *  ir_shift_reg[1] : ir_shift_reg[0] ;
+assign _02_[1] = shift_ir ?  * src = "xgate_jtag.v:313" *  ir_shift_reg[2] : ir_shift_reg[1] ;
+assign _02_[2] = shift_ir ?  * src = "xgate_jtag.v:313" *  ir_shift_reg[3] : ir_shift_reg[2] ;
+assign _02_[3] = shift_ir ?  * src = "xgate_jtag.v:313" *  jtag_tdi : ir_shift_reg[3] ;
+assign _01_[0] = capture_ir ?  * src = "xgate_jtag.v:311" *  ir_reg[0] : _02_[0] ;
+assign _01_[1] = capture_ir ?  * src = "xgate_jtag.v:311" *  ir_reg[1] : _02_[1] ;
+assign _01_[2] = capture_ir ?  * src = "xgate_jtag.v:311" *  ir_reg[2] : _02_[2] ;
+assign _01_[3] = capture_ir ?  * src = "xgate_jtag.v:311" *  ir_reg[3] : _02_[3] ;
+assign _00_[0] = update_ir ?  * src = "xgate_jtag.v:320" *  ir_shift_reg[0] : ir_reg[0] ;
+assign _00_[1] = update_ir ?  * src = "xgate_jtag.v:320" *  ir_shift_reg[1] : ir_reg[1] ;
+assign _00_[2] = update_ir ?  * src = "xgate_jtag.v:320" *  ir_shift_reg[2] : ir_reg[2] ;
+assign _00_[3] = update_ir ?  * src = "xgate_jtag.v:320" *  ir_shift_reg[3] : ir_reg[3] ;
+(*  src = "xgate_jtag.v:308" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      ir_shift_reg[0] <= 0 ;
+else 
+      ir_shift_reg[0] <= _01_[0] ;
+(*  src = "xgate_jtag.v:308" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      ir_shift_reg[1] <= 0 ;
+else 
+      ir_shift_reg[1] <= _01_[1] ;
+(*  src = "xgate_jtag.v:308" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      ir_shift_reg[2] <= 0 ;
+else 
+      ir_shift_reg[2] <= _01_[2] ;
+(*  src = "xgate_jtag.v:308" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      ir_shift_reg[3] <= 0 ;
+else 
+      ir_shift_reg[3] <= _01_[3] ;
+(*  src = "xgate_jtag.v:317" * 
+  always @ posedge update_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      ir_reg[0] <= 1 ;
+else 
+      ir_reg[0] <= _00_[0] ;
+(*  src = "xgate_jtag.v:317" * 
+  always @ posedge update_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      ir_reg[1] <= 1 ;
+else 
+      ir_reg[1] <= _00_[1] ;
+(*  src = "xgate_jtag.v:317" * 
+  always @ posedge update_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      ir_reg[2] <= 1 ;
+else 
+      ir_reg[2] <= _00_[2] ;
+(*  src = "xgate_jtag.v:317" * 
+  always @ posedge update_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      ir_reg[3] <= 1 ;
+else 
+      ir_reg[3] <= _00_[3] ;
+assign ir_so = ir_shift_reg[0] ;
+endmodule
+(*  src = "xgate_jtag.v:191" * 
+module xgate_jtag_sm jtag_state  next_jtag_state  update_ir  capture_ir  shift_ir  update_dr  capture_dr  shift_dr  capture_clk  jtag_reset_n  jtag_tms  ;
+wire _000_ ;
+wire _001_ ;
+wire _002_ ;
+wire [1:0] _003_ ;
+wire [1:0] _004_ ;
+wire [1:0] _005_ ;
+wire [1:0] _006_ ;
+wire [1:0] _007_ ;
+wire _008_ ;
+wire [1:0] _009_ ;
+wire [1:0] _010_ ;
+wire [5:0] _011_ ;
+wire [2:0] _012_ ;
+wire _013_ ;
+wire [5:0] _014_ ;
+wire [2:0] _015_ ;
+wire _016_ ;
+wire [5:0] _017_ ;
+wire [2:0] _018_ ;
+wire _019_ ;
+wire [5:0] _020_ ;
+wire [2:0] _021_ ;
+wire _022_ ;
+wire [5:0] _023_ ;
+wire [2:0] _024_ ;
+wire _025_ ;
+wire _026_ ;
+wire [3:0] _027_ ;
+wire [3:0] _028_ ;
+wire _029_ ;
+wire _030_ ;
+wire _031_ ;
+wire _032_ ;
+wire _033_ ;
+wire _034_ ;
+wire _035_ ;
+wire _036_ ;
+wire _037_ ;
+wire _038_ ;
+wire _039_ ;
+wire _040_ ;
+wire _041_ ;
+wire _042_ ;
+wire _043_ ;
+(*  src = "xgate_jtag.v:245|<techmap.v>:432" * 
+  wire[47:0]  _044_ ;
+(*  src = "xgate_jtag.v:245|<techmap.v>:428" * 
+  wire[3:0]  _045_ ;
+wire _046_ ;
+wire _047_ ;
+wire _048_ ;
+(*  src = "xgate_jtag.v:245|<techmap.v>:445" * 
+  wire _049_ ;
+(*  src = "xgate_jtag.v:249" * 
+  wire[3:0]  _050_ ;
+(*  src = "xgate_jtag.v:204" * 
+  input capture_clk ;
+(*  src = "xgate_jtag.v:201" * 
+  output capture_dr ;
+(*  src = "xgate_jtag.v:197" * 
+  output capture_ir ;
+(*  src = "xgate_jtag.v:205" * 
+  input jtag_reset_n ;
+(*  src = "xgate_jtag.v:193" * 
+  output[3:0]  jtag_state ;
+reg [3:0] jtag_state ;
+(*  src = "xgate_jtag.v:206" * 
+  input jtag_tms ;
+(*  src = "xgate_jtag.v:194" * 
+  output[3:0]  next_jtag_state ;
+(*  src = "xgate_jtag.v:202" * 
+  output shift_dr ;
+(*  src = "xgate_jtag.v:198" * 
+  output shift_ir ;
+(*  src = "xgate_jtag.v:200" * 
+  output update_dr ;
+(*  src = "xgate_jtag.v:196" * 
+  output update_ir ;
+assign _029_ = _003_[0] | * src = "xgate_jtag.v:226" *   _003_[1] ;
+assign _030_ = _004_[0] | * src = "xgate_jtag.v:227" *   _003_[1] ;
+assign _031_ = _004_[0] | * src = "xgate_jtag.v:228" *   _005_[1] ;
+assign _032_ = _003_[0] | * src = "xgate_jtag.v:230" *   _006_[1] ;
+assign _033_ = _004_[0] | * src = "xgate_jtag.v:231" *   _006_[1] ;
+assign _004_[0] = jtag_state[0] | * src = "xgate_jtag.v:232" *   _028_[1] ;
+assign _034_ = _004_[0] | * src = "xgate_jtag.v:232" *   _007_[1] ;
+assign _001_ = shift_ir | capture_ir ;
+assign _002_ = shift_dr | capture_dr ;
+assign _008_ = _048_ | update_ir ;
+assign _000_ = _008_ | update_dr ;
+assign _005_[1] = jtag_state[2] | * src = "xgate_jtag.v:245" *   _027_[3] ;
+assign _035_ = _009_[0] | * src = "xgate_jtag.v:245" *   _005_[1] ;
+assign _036_ = _010_[0] | * src = "xgate_jtag.v:245" *   _005_[1] ;
+assign _037_ = _003_[0] | * src = "xgate_jtag.v:245" *   _005_[1] ;
+assign _038_ = _009_[0] | * src = "xgate_jtag.v:245" *   _006_[1] ;
+assign _010_[0] = _027_[0] | * src = "xgate_jtag.v:245" *   _028_[1] ;
+assign _039_ = _010_[0] | * src = "xgate_jtag.v:245" *   _007_[1] ;
+assign _003_[0] = _027_[0] | * src = "xgate_jtag.v:245" *   jtag_state[1] ;
+assign _007_[1] = jtag_state[2] | * src = "xgate_jtag.v:245" *   jtag_state[3] ;
+assign _040_ = _003_[0] | * src = "xgate_jtag.v:245" *   _007_[1] ;
+assign _006_[1] = _027_[2] | * src = "xgate_jtag.v:245" *   jtag_state[3] ;
+assign _041_ = _010_[0] | * src = "xgate_jtag.v:245" *   _006_[1] ;
+assign _009_[0] = jtag_state[0] | * src = "xgate_jtag.v:245" *   jtag_state[1] ;
+assign _042_ = _009_[0] | * src = "xgate_jtag.v:245" *   _003_[1] ;
+assign _003_[1] = _027_[2] | * src = "xgate_jtag.v:245" *   _027_[3] ;
+assign _043_ = _010_[0] | * src = "xgate_jtag.v:245" *   _003_[1] ;
+assign _011_[0] = _000_ | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _044_[6] ;
+assign _012_[0] = _011_[0] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _011_[1] ;
+assign _012_[1] = _011_[2] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _011_[3] ;
+assign _012_[2] = _011_[4] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _011_[5] ;
+assign _013_ = _012_[0] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _012_[1] ;
+assign _045_[2] = _013_ | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _012_[2] ;
+assign _014_[0] = _044_[3] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _044_[7] ;
+assign _014_[1] = _044_[11] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _044_[15] ;
+assign _014_[2] = _001_ | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _011_[2] ;
+assign _015_[0] = _014_[0] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _014_[1] ;
+assign _016_ = _015_[0] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _014_[2] ;
+assign _045_[3] = _016_ | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _014_[5] ;
+assign _017_[0] = _044_[1] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _044_[5] ;
+assign _017_[1] = _044_[9] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _044_[13] ;
+assign _017_[2] = _044_[17] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _011_[2] ;
+assign _017_[3] = _044_[25] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _044_[29] ;
+assign _017_[4] = _044_[33] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _044_[37] ;
+assign _017_[5] = _044_[41] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _020_[5] ;
+assign _018_[0] = _017_[0] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _017_[1] ;
+assign _018_[1] = _017_[2] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _017_[3] ;
+assign _018_[2] = _017_[4] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _017_[5] ;
+assign _019_ = _018_[0] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _018_[1] ;
+assign _045_[1] = _019_ | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _018_[2] ;
+assign _020_[0] = _044_[1] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _044_[6] ;
+assign _020_[1] = _044_[9] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _044_[15] ;
+assign _020_[2] = _044_[16] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _044_[20] ;
+assign _020_[3] = _011_[3] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _044_[29] ;
+assign _020_[4] = _044_[32] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _044_[36] ;
+assign _021_[0] = _020_[0] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _020_[1] ;
+assign _021_[1] = _020_[2] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _020_[3] ;
+assign _021_[2] = _020_[4] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _020_[5] ;
+assign _022_ = _021_[0] | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _021_[1] ;
+assign _045_[0] = _022_ | * src = "xgate_jtag.v:245|<techmap.v>:441" *   _021_[2] ;
+assign _023_[0] = _000_ | * src = "xgate_jtag.v:245|<techmap.v>:445" *   _044_[7] ;
+assign _023_[3] = _046_ | * src = "xgate_jtag.v:245|<techmap.v>:445" *   _047_ ;
+assign _023_[4] = _044_[32] | * src = "xgate_jtag.v:245|<techmap.v>:445" *   _002_ ;
+assign _011_[5] = _044_[42] | * src = "xgate_jtag.v:245|<techmap.v>:445" *   _014_[5] ;
+assign _024_[0] = _023_[0] | * src = "xgate_jtag.v:245|<techmap.v>:445" *   _014_[1] ;
+assign _024_[1] = _014_[2] | * src = "xgate_jtag.v:245|<techmap.v>:445" *   _023_[3] ;
+assign _024_[2] = _023_[4] | * src = "xgate_jtag.v:245|<techmap.v>:445" *   _011_[5] ;
+assign _025_ = _024_[0] | * src = "xgate_jtag.v:245|<techmap.v>:445" *   _024_[1] ;
+assign _049_ = _025_ | * src = "xgate_jtag.v:245|<techmap.v>:445" *   _024_[2] ;
+assign _026_ = _009_[0] | * src = "xgate_jtag.v:245" *   _007_[1] ;
+assign update_ir = ~ * src = "xgate_jtag.v:226" *  _029_ ;
+assign capture_ir = ~ * src = "xgate_jtag.v:227" *  _030_ ;
+assign shift_ir = ~ * src = "xgate_jtag.v:228" *  _031_ ;
+assign update_dr = ~ * src = "xgate_jtag.v:230" *  _032_ ;
+assign capture_dr = ~ * src = "xgate_jtag.v:231" *  _033_ ;
+assign shift_dr = ~ * src = "xgate_jtag.v:232" *  _034_ ;
+assign _044_[7] = ~ * src = "xgate_jtag.v:245" *  _035_ ;
+assign _044_[11] = ~ * src = "xgate_jtag.v:245" *  _036_ ;
+assign _044_[15] = ~ * src = "xgate_jtag.v:245" *  _037_ ;
+assign _011_[2] = ~ * src = "xgate_jtag.v:245" *  _038_ ;
+assign _046_ = ~ * src = "xgate_jtag.v:245" *  _026_ ;
+assign _047_ = ~ * src = "xgate_jtag.v:245" *  _039_ ;
+assign _044_[32] = ~ * src = "xgate_jtag.v:245" *  _040_ ;
+assign _044_[42] = ~ * src = "xgate_jtag.v:245" *  _041_ ;
+assign _048_ = ~ * src = "xgate_jtag.v:245" *  _042_ ;
+assign _014_[5] = ~ * src = "xgate_jtag.v:245" *  _043_ ;
+assign _050_[3] = ~ * src = "xgate_jtag.v:276" *  jtag_tms ;
+assign next_jtag_state[0] = _049_ ?  * src = "xgate_jtag.v:245|<techmap.v>:445" *  _045_[0] : 1'bx ;
+assign next_jtag_state[1] = _049_ ?  * src = "xgate_jtag.v:245|<techmap.v>:445" *  _045_[1] : 1'bx ;
+assign next_jtag_state[2] = _049_ ?  * src = "xgate_jtag.v:245|<techmap.v>:445" *  _045_[2] : 1'bx ;
+assign next_jtag_state[3] = _049_ ?  * src = "xgate_jtag.v:245|<techmap.v>:445" *  _045_[3] : 1'bx ;
+(*  src = "xgate_jtag.v:236" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      jtag_state[0] <= 1 ;
+else 
+      jtag_state[0] <= next_jtag_state[0] ;
+(*  src = "xgate_jtag.v:236" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      jtag_state[1] <= 1 ;
+else 
+      jtag_state[1] <= next_jtag_state[1] ;
+(*  src = "xgate_jtag.v:236" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      jtag_state[2] <= 1 ;
+else 
+      jtag_state[2] <= next_jtag_state[2] ;
+(*  src = "xgate_jtag.v:236" * 
+  always @ posedge capture_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      jtag_state[3] <= 1 ;
+else 
+      jtag_state[3] <= next_jtag_state[3] ;
+assign _028_[1] = jtag_state[1] ^ * src = "xgate_jtag.v:245" *   1'b1 ;
+assign _027_[2] = jtag_state[2] ^ * src = "xgate_jtag.v:245" *   1'b1 ;
+assign _027_[0] = jtag_state[0] ^ * src = "xgate_jtag.v:245" *   1'b1 ;
+assign _027_[3] = jtag_state[3] ^ * src = "xgate_jtag.v:245" *   1'b1 ;
+assign _020_[5] = jtag_tms & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _014_[5] ;
+assign _044_[41] = _050_[3] & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _044_[42] ;
+assign _044_[36] = jtag_tms & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _002_ ;
+assign _044_[37] = _050_[3] & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _002_ ;
+assign _044_[33] = _050_[3] & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _044_[32] ;
+assign _011_[4] = jtag_tms & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _044_[32] ;
+assign _044_[29] = _050_[3] & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _047_ ;
+assign _011_[3] = jtag_tms & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _046_ ;
+assign _044_[25] = _050_[3] & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _046_ ;
+assign _044_[20] = jtag_tms & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _011_[2] ;
+assign _044_[16] = jtag_tms & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _001_ ;
+assign _044_[17] = _050_[3] & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _001_ ;
+assign _044_[13] = _050_[3] & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _044_[15] ;
+assign _011_[1] = jtag_tms & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _044_[15] ;
+assign _044_[9] = _050_[3] & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _044_[11] ;
+assign _044_[6] = jtag_tms & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _044_[7] ;
+assign _044_[5] = _050_[3] & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _044_[7] ;
+assign _044_[1] = jtag_tms & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _000_ ;
+assign _044_[3] = _050_[3] & * src = "xgate_jtag.v:245|<techmap.v>:434" *   _000_ ;
+endmodule
+(*  src = "xgate_jtag.v:450" * 
+module xgate_tdo_mux sel_bypass  sel_bsd  sel_id  sel_udi_1  bypass_so  bsd_so  id_so  user1_so  ir_so  shift_dr  shift_ir  update_clk  jtag_reset_n  jtag_tdo  jtag_tdo_en  ;
+(*  src = "xgate_jtag.v:488" * 
+  wire _00_ ;
+(*  src = "xgate_jtag.v:472" * 
+  wire _01_ ;
+(*  src = "xgate_jtag.v:473" * 
+  wire _02_ ;
+(*  src = "xgate_jtag.v:474" * 
+  wire _03_ ;
+(*  src = "xgate_jtag.v:475" * 
+  wire _04_ ;
+(*  src = "xgate_jtag.v:478" * 
+  wire _05_ ;
+(*  src = "xgate_jtag.v:478" * 
+  wire _06_ ;
+(*  src = "xgate_jtag.v:478" * 
+  wire _07_ ;
+(*  src = "xgate_jtag.v:473" * 
+  wire bsd_gate ;
+(*  src = "xgate_jtag.v:458" * 
+  input bsd_so ;
+(*  src = "xgate_jtag.v:472" * 
+  wire bypass_gate ;
+(*  src = "xgate_jtag.v:457" * 
+  input bypass_so ;
+(*  src = "xgate_jtag.v:474" * 
+  wire id_gate ;
+(*  src = "xgate_jtag.v:459" * 
+  input id_so ;
+(*  src = "xgate_jtag.v:476" * 
+  wire ir_gate ;
+(*  src = "xgate_jtag.v:461" * 
+  input ir_so ;
+(*  src = "xgate_jtag.v:466" * 
+  input jtag_reset_n ;
+(*  src = "xgate_jtag.v:468" * 
+  output jtag_tdo ;
+reg jtag_tdo ;
+(*  src = "xgate_jtag.v:469" * 
+  output jtag_tdo_en ;
+reg jtag_tdo_en ;
+(*  src = "xgate_jtag.v:478" * 
+  wire jtag_tdo_mux ;
+(*  src = "xgate_jtag.v:453" * 
+  input sel_bsd ;
+(*  src = "xgate_jtag.v:452" * 
+  input sel_bypass ;
+(*  src = "xgate_jtag.v:454" * 
+  input sel_id ;
+(*  src = "xgate_jtag.v:455" * 
+  input sel_udi_1 ;
+(*  src = "xgate_jtag.v:463" * 
+  input shift_dr ;
+(*  src = "xgate_jtag.v:464" * 
+  input shift_ir ;
+(*  src = "xgate_jtag.v:475" * 
+  wire udi_1_gate ;
+(*  src = "xgate_jtag.v:465" * 
+  input update_clk ;
+(*  src = "xgate_jtag.v:460" * 
+  input user1_so ;
+assign _01_ = shift_dr & * src = "xgate_jtag.v:472" *   sel_bypass ;
+assign bypass_gate = _01_ & * src = "xgate_jtag.v:472" *   bypass_so ;
+assign _02_ = shift_dr & * src = "xgate_jtag.v:473" *   sel_bsd ;
+assign bsd_gate = _02_ & * src = "xgate_jtag.v:473" *   bsd_so ;
+assign _03_ = shift_dr & * src = "xgate_jtag.v:474" *   sel_id ;
+assign id_gate = _03_ & * src = "xgate_jtag.v:474" *   id_so ;
+assign _04_ = shift_dr & * src = "xgate_jtag.v:475" *   sel_udi_1 ;
+assign udi_1_gate = _04_ & * src = "xgate_jtag.v:475" *   user1_so ;
+assign ir_gate = shift_ir & * src = "xgate_jtag.v:476" *   ir_so ;
+assign _05_ = bypass_gate | * src = "xgate_jtag.v:478" *   bsd_gate ;
+assign _06_ = _05_ | * src = "xgate_jtag.v:478" *   id_gate ;
+assign _07_ = _06_ | * src = "xgate_jtag.v:478" *   udi_1_gate ;
+assign jtag_tdo_mux = _07_ | * src = "xgate_jtag.v:478" *   ir_gate ;
+assign _00_ = shift_dr | * src = "xgate_jtag.v:492" *   shift_ir ;
+(*  src = "xgate_jtag.v:481" * 
+  always @ posedge update_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      jtag_tdo <= 0 ;
+else 
+      jtag_tdo <= jtag_tdo_mux ;
+(*  src = "xgate_jtag.v:488" * 
+  always @ posedge update_clk or negedge jtag_reset_n 
+    if  !jtag_reset_n 
+      jtag_tdo_en <= 0 ;
+else 
+      jtag_tdo_en <= _00_ ;
+endmodule
